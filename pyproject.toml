@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-turn-eval-harness-runner"
+version = "0.1.0"
+description = "Executes deterministic multi-turn agent simulation scenarios with scripted tool responses and rubric scoring"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+multi-turn-eval-harness-runner = "multi_turn_eval_harness_runner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["multi_turn_eval_harness_runner*"]
